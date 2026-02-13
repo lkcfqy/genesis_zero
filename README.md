@@ -95,5 +95,3 @@ In the graphical interfaces for Stages 2-5:
 * **NumPy** 🔢: Matrix operations and data processing.
 
 ```
-
-```
