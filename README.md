@@ -1,148 +1,99 @@
-根据你提供的代码文件和项目结构，为你整理了一份完整的 **README.md** 文档。这份文档涵盖了项目背景、六个进化阶段的详细说明、核心机制以及运行指南。
+# 🌌 Genesis: Artificial Life & Neuroevolution Simulation 🧬
 
-你可以直接复制以下内容作为项目的说明文档：
+**Genesis** is an adorable yet powerful experimental project that explores the origins of machine intelligence! ✨ It doesn't just program intelligence; it programs the "laws of evolution" itself. Through 6 progressive evolutionary stages, you can watch cute little agents evolve from basic logical units into advanced groups capable of spatial awareness, memory, game strategy, and tribal cooperation! 🥰
 
----
-
-# Genesis: Artificial Life & Neuroevolution Simulation
-
-# 创世纪：人工生命与神经进化模拟
-
-**Genesis** 是一个探索机器智能起源的实验性项目。本项目不直接编写智能，而是编写“进化的法则”。通过 6 个渐进的进化阶段，模拟了智能体（Agent）如何从最基本的逻辑运算单元，一步步进化出空间感知、记忆能力、博弈策略，最终形成具备社会分工与部落合作的高级群体。
-
-> "智能不是被设计出来的，而是在生存压力下涌现的。"
+> *"Intelligence is not designed; it emerges under the pressure of survival."* 🌱
 
 ---
 
-## 📂 项目结构与进化阶段 (Stages)
+## 📂 Project Structure & Evolutionary Stages 🚀
 
-本项目包含 6 个核心脚本，代表了智能进化的不同里程碑。建议按照顺序运行，观察 AI 能力的演变。
+This project contains 6 core scripts, each representing a milestone in AI evolution. It is highly recommended to run them in order to witness the magic! 🪄
 
-### Stage 0: 智能的火花 (The Spark)
+### 🌟 Stage 0: The Spark (`main.py`)
+* **Goal**: Solve the classic XOR logic problem.
+* **Core Concept**: **Self-Modifying Architecture** 🛠️
+* **Mechanism**: When the minimalist neural network gets stuck, it performs "brain surgery" on itself by adding hidden layers or neurons! 🧠✂️
 
-* **文件**: `main.py`
-* **目标**: 解决经典的 XOR（异或）逻辑问题。
-* **核心概念**: **自我重构 (Self-Modifying Architecture)**
-* 初始神经网络是一个极简的线性感知机，从数学原理上无法解决 XOR 问题。
-* **机制**: 当网络训练陷入瓶颈（Loss 停滞）时，它会自动进行“脑部手术”——在架构中物理插入隐藏层或增加神经元。
-* **看点**: 观察机器如何在“学不会”的生存压力下，自动生长出能理解复杂逻辑的大脑结构。
+### 🦋 Stage 1: Neural Society (`genesis_one.py`)
+* **Goal**: Survival of the fittest in a pure logic world.
+* **Core Concept**: **Natural Selection** 🧬
+* **Mechanism**: Only agents that solve the XOR puzzle get energy to reproduce and pass their brain structures to the next generation! 👨‍👩‍👧‍👦
 
+### 🍖 Stage 2: Hunting Grounds (`genesis_two.py`)
+* **Goal**: Spatial awareness and autonomous foraging.
+* **Core Concept**: **Embodied Intelligence** 🏃‍♂️
+* **Mechanism**: Agents enter a 2D Pygame world! They must learn to move and find green food (🍏) to survive and evolve complex brains.
 
+### 🌲 Stage 3: Dark Forest (`genesis_three.py`)
+* **Goal**: Memory and survival games.
+* **Core Concept**: **Recurrent Neural Networks (RNN/GRU)** 🔄
+* **Mechanism**: Agents gain "memory" to process sequences. It's a cruel world where they must decide whether to hunt weaker peers or flee from stronger ones! 🐺💨
 
-### Stage 1: 神经网络社会 (Neural Society)
+### ⚖️ Stage 4: Autonomous Evolution (`genesis_four.py`)
+* **Goal**: Self-design and dynamic environmental balance.
+* **Core Concept**: **Brain Plasticity & Homeostasis** 🧘‍♀️
+* **Mechanism**: Agents choose their evolutionary path: "see clearer" or "remember more". An Auto-Balancer adjusts food spawn rates based on population density to prevent extinction! 🌍
 
-* **文件**: `genesis_one.py`
-* **目标**: 种群在纯逻辑世界中的优胜劣汰。
-* **核心概念**: **自然选择 (Natural Selection)**
-* 引入 `Organism`（生物体）概念，不再是单体进化。
-* **机制**: 只有成功解出 XOR 难题的个体才能获得能量并繁衍，将大脑结构遗传给下一代。
-* **看点**: 程序会生成可视化图表，展示种群数量与智力水平（Loss）的协同演化曲线。
-
-
-
-### Stage 2: 狩猎场 (Hunting Grounds)
-
-* **文件**: `genesis_two.py`
-* **目标**: 空间感知与自主觅食。
-* **环境**: 2D 栅格世界 (Pygame 可视化)。
-* **核心概念**: **具身智能 (Embodied Intelligence)**
-* 智能体进化出 `HunterBrain`，输入视觉信号（食物坐标），输出动作（移动方向）。
-* **机制**: 必须学会移动去寻找食物维持生命。只有活得够久的个体才有机会积累能量，并通过变异进化出更复杂的神经网络（如加深层数）。
-* **看点**: 观察“无脑”的随机乱跑如何逐渐进化为有目的的捕食行为。
-
-
-
-### Stage 3: 黑暗森林 (Dark Forest)
-
-* **文件**: `genesis_three.py`
-* **目标**: 记忆能力与生存博弈。
-* **核心概念**: **循环神经网络 (RNN/GRU)**
-* 引入 `RecurrentBrain`，智能体拥有了“记忆”，能处理序列信息。
-* **机制**: 视野中包含墙壁、食物、**强者**（威胁）和**弱者**（猎物）。智能体必须根据对手的能量水平，在“捕食同类”和“躲避强者”之间做出瞬间决策。
-* **看点**: 模拟了残酷的生存竞争，高代际的智能体（金色）会展现出更高级的生存策略。
-
-
-
-### Stage 4: 自律进化 (Autonomous Evolution)
-
-* **文件**: `genesis_four.py`
-* **目标**: 自我设计与环境动态平衡。
-* **核心概念**: **大脑可塑性与生态平衡 (Brain Plasticity & Homeostasis)**
-* **EvolvingBrain**: 智能体可以自主决定进化方向——是选择“看得更清”（加宽视觉编码层）还是“记得更多”（增加 GRU 记忆容量）。
-* **机制**: 引入**自动平衡仪 (Auto-Balancer)**，环境会根据人口密度自动调节食物生成率，维持生态系统的动态平衡，防止人口爆炸或灭绝。
-
-
-
-### Stage 5: 部落战争 (Tribal Wars)
-
-* **文件**: `genesis_five.py`
-* **目标**: 沟通、语言与群体合作。
-* **核心概念**: **社会性 (Social Behavior)**
-* **Tribes**: 智能体分为红蓝两族，拥有视觉识别能力。
-* **机制**: 地图中出现了强大的猎物（猛犸象），单体无法击杀。智能体必须学会：
-1. **识别队友**: 区分红蓝阵营。
-2. **语言沟通**: 输出信号协调行动。
-3. **围猎**: 与同族队友同时攻击目标才能获取高额能量。
-
-
-* **看点**: 观察群体智能的涌现，以及种族间为了资源产生的对抗与合作。
-
-
+### ⚔️ Stage 5: Tribal Wars (`genesis_five.py`)
+* **Goal**: Communication, language, and group cooperation.
+* **Core Concept**: **Social Behavior** 🤝
+* **Mechanism**: Agents are divided into Red 🔴 and Blue 🔵 tribes. They must communicate to identify teammates and work together to hunt giant Mammoths (🦣) for massive energy!
 
 ---
 
-## 🛠️ 安装与运行 (Requirements & Usage)
+## 🛠️ Installation & Usage 💻
 
-### 1. 环境依赖
-
-本项目基于 Python 3 开发，请确保安装了以下核心库：
-
+### 1. Requirements 📦
+This project is built with Python 3. Please make sure you have the following cute core libraries installed:
 ```bash
 pip install torch numpy matplotlib pygame
 
 ```
 
-### 2. 运行指南
+### 2. How to Run 🏃‍♀️
 
-你可以按照进化的顺序依次运行各个脚本：
+Run the scripts in evolutionary order to see the magic unfold:
 
 ```bash
-# Stage 0: 观察单个网络如何生长出解决逻辑问题的能力
+# Stage 0: Watch a single network grow to solve logic! 🧠
 python main.py
 
-# Stage 1: 观察种群的自然选择与优胜劣汰
+# Stage 1: Observe natural selection in the population! 🦋
 python genesis_one.py
 
-# Stage 2: 启动 2D 狩猎场，观察觅食行为
+# Stage 2: Start the 2D hunting ground and watch them forage! 🍖
 python genesis_two.py
 
-# Stage 3: 进入黑暗森林，观察博弈与记忆
+# Stage 3: Enter the Dark Forest for memory and survival games! 🌲
 python genesis_three.py
 
-# Stage 4: 开启自律进化模式
+# Stage 4: Activate autonomous evolution mode! ⚖️
 python genesis_four.py
 
-# Stage 5: 见证部落战争与合作围猎
+# Stage 5: Witness tribal wars and cooperative mammoth hunting! ⚔️🦣
 python genesis_five.py
 
 ```
 
-### 3. 操作说明 (Pygame 窗口)
+### 3. Pygame UI Guide 🎮
 
-在 Stage 2-5 的可视化界面中：
+In the graphical interfaces for Stages 2-5:
 
-* **红色/蓝色方块**: 代表智能体 (Agent)。颜色亮度或特殊边框通常代表其能量、代际或阵营。
-* **绿色方块**: 食物 (Food)。
-* **紫色方块**: 猛犸象 (Mammoth - 仅限 Stage 5)。
-* **UI 信息**: 屏幕左上角会实时显示当前种群数量 (Pop)、最高代际 (Gen) 和环境参数。
-
----
-
-## 🧬 核心技术栈
-
-* **PyTorch**: 用于构建和训练动态神经网络 (Dynamic NN, RNN, GRU)。
-* **Pygame**: 用于构建 2D 仿真环境与实时渲染。
-* **Matplotlib**: 用于生成进化数据分析图表。
-* **NumPy**: 用于矩阵运算与环境数据处理。
+* **Red/Blue Squares**: Our cute Agents! Colors/borders indicate their energy, generation, or tribe.
+* **Green Squares**: Yummy Food! 🍏
+* **Purple Squares**: Big Mammoths (Stage 5 only) 🦣.
+* **UI Info**: Top-left corner displays Population (Pop), Max Generation (Gen), and environmental stats! 📊
 
 ---
+
+## 🧬 Tech Stack 💻
+
+* **PyTorch** 🔥: Building & training dynamic NNs, RNNs, and GRUs.
+* **Pygame** 🕹️: 2D simulation environments and real-time rendering.
+* **Matplotlib** 📈: Generating beautiful evolutionary data charts.
+* **NumPy** 🔢: Matrix operations and data processing.
+
+```
+
+```
